@@ -12,7 +12,7 @@ After setting up mongoDB, follow the instructions below
 - run `load( "query/createCollections.js" )` to create 4 collections (video, product, user, comment)
 - open new terminal and run `npm run start` to start local server
 
-create .env file and add these variabel
+create `.env` file and add these variabel
 
 ```
 
