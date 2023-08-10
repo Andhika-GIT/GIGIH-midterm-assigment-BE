@@ -1,25 +1,25 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema({
   email: {
     type: String,
     unique: true,
     lowercase: true,
-    required: [true, "please enter your email"],
+    required: [true, 'please enter your email'],
     validate: {
       validator: function (val) {
         return validator.isEmail(val);
       },
-      message: "please enter a valid email",
+      message: 'please enter a valid email',
     },
   },
   username: {
     type: String,
-    required: [true, "please enter your username"],
+    required: [true, 'please enter your username'],
   },
   password: {
     type: String,
-    required: [true, "please enter your password"],
+    required: [true, 'please enter your password'],
     minlength: 8,
   },
   photo: {
@@ -27,6 +27,6 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-const User = mongoose.model("User", userSchema);
+const User = mongoose.model('User', userSchema, 'user');
 
 export default User;
