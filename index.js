@@ -1,10 +1,11 @@
-import dotenv from "dotenv";
-import express from "express";
-import mongoose from "mongoose";
-import bodyParser from "body-parser";
+import dotenv from 'dotenv';
+import express from 'express';
+import mongoose from 'mongoose';
+import bodyParser from 'body-parser';
+import cors from 'cors';
 
 // routes
-import router from "./routes/router.js";
+import router from './routes/router.js';
 
 dotenv.config();
 
@@ -14,16 +15,17 @@ const DB_URL = process.env.DB_URL;
 mongoose.connect(DB_URL);
 const db = mongoose.connection;
 
-db.on("error", (err) => {
+db.on('error', (err) => {
   console.log(err);
 });
 
-db.on("connected", () => {
-  console.log("connected!");
+db.on('connected', () => {
+  console.log('connected!');
 });
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(
@@ -31,8 +33,8 @@ app.use(
     extended: true,
   })
 );
-app.use("/api/v1", router);
+app.use('/api/v1', router);
 
 app.listen(process.env.PORT, (req, res) => {
-  console.log("server is running");
+  console.log('server is running');
 });
