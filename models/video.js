@@ -1,9 +1,12 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const videoSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true,
+  },
+  description: {
+    type: String,
   },
   imageURL: {
     type: String,
@@ -11,6 +14,6 @@ const videoSchema = new mongoose.Schema({
   },
 });
 
-const Video = mongoose.model('Video', videoSchema, 'video');
+const Video = mongoose.model("Video", videoSchema, "video");
 
 export default Video;
