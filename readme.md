@@ -10,6 +10,7 @@ After setting up mongoDB, follow the instructions below
 - run `mongosh`, it should run the local server for mongoDB
 - run `use youtube` to create new database called "youtube"
 - run `load( "query/createCollections.js" )` to create 4 collections (video, product, user, comment)
+- run `load( "query/insertVideo.js" )` to insert data into video collection
 - open new terminal and run `npm run start` to start local server
 
 create `.env` file and add these variabel
@@ -17,7 +18,8 @@ create `.env` file and add these variabel
 ```
 
   PORT=5000
-  DB_URL=mongodb://localhost:27017/youtube
+  DB_URL=mongodb://localhost:27017/tokopedia_play
+
 
 ```
 
@@ -37,7 +39,7 @@ create `.env` file and add these variabel
 
 ## **API REQUEST AND RESPONSE**
 
-### **GET `/api/v1/video-thumbnail`**
+### **GET `/api/v1/video`**
 
 Returns all videos thumbnail data.
 
@@ -64,7 +66,34 @@ Returns all videos thumbnail data.
 }
 ```
 
-### **GET `/api/v1/comment/:videoId`**
+### **GET `/api/v1/video/:videoId`**
+
+Returns single video.
+
+- **URL Params**  
+  None
+- **Data Params**  
+  None
+- **Headers**  
+  Content-Type: application/json
+- **Success Response:**
+- **Code:** 200  
+  **Content (Example):**
+
+```
+{
+  video: [
+           {
+            id: asdf08108312
+            title: "video-1"
+            imageUrl: "http.imageurl.com"
+           },
+           ...
+         ]
+}
+```
+
+### **GET `/api/v1/product/:videoId`**
 
 Returns all product list based on spesific video.
 
