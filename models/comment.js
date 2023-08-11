@@ -1,11 +1,7 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const commentSchema = new mongoose.Schema({
   videoId: {
-    type: String,
-    required: true,
-  },
-  userId: {
     type: String,
     required: true,
   },
@@ -23,6 +19,6 @@ const commentSchema = new mongoose.Schema({
   },
 });
 
-const Comment = mongoose.model('Comment', commentSchema, 'comment');
+const Comment = mongoose.model("Comment", commentSchema, "comment");
 
 export default Comment;
