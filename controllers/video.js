@@ -44,3 +44,21 @@ export const getSingleVideo = async (req, res) => {
     });
   }
 };
+
+export const createVideo = async (req, res) => {
+  try {
+    const newVideo = await Video.create({ ...req.body });
+
+    res
+      .status(200)
+      // send the json format data into client
+      .json({
+        status: "success",
+        data: newVideo,
+      });
+  } catch (err) {
+    res.status(500).json({
+      message: err.message,
+    });
+  }
+};

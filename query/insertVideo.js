@@ -2,38 +2,43 @@ db = connect("mongodb://localhost/tokopedia_play");
 
 db.video.insertMany([
   {
-    title: "free yourself",
+    title: "AWS services",
     description:
-      "Liberate your spirit from the chains of doubt and fear. Embrace your authentic self, for within you lies boundless potential waiting to be unleashed. Cast aside the limitations that society and your own mind impose. Embrace the journey of self-discovery, where each step you take towards freedom paints a brighter, more vibrant future.",
+      "Amazon Web Services (AWS) is a comprehensive cloud computing platform offering diverse services like computing power, storage, databases, and more. It enables businesses and individuals to build, deploy, and manage applications and resources with scalability, flexibility, and cost efficiency.",
     imageURL:
-      "https://images.unsplash.com/photo-1533228876829-65c94e7b5025?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+      "https://i.ytimg.com/vi/JIbIYCM48to/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBpsvSukRVi6lDt0tN1SRz333I6BA",
+    videoURL: "https://youtu.be/JIbIYCM48to",
   },
   {
-    title: "best place to visit",
+    title: "NiagaHoster",
     description:
-      "Embark on an Unforgettable Journey: Exploring the Most Exquisite Travel Destinations. From breathtaking natural wonders to culturally rich landmarks, this collection of must-visit places promises an unparalleled adventure for every wanderlust-filled soul.",
+      "Niagahoster is a prominent Indonesian web hosting and domain registration provider. It offers a range of digital services, including website hosting, domain name registration, and cloud-based solutions, helping businesses and individuals establish a strong online presence with reliable and accessible technology.",
     imageURL:
-      "https://images.unsplash.com/photo-1690722410513-ff89e9ceb825?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+      "https://i.ytimg.com/vi/zeW3wf4ByEA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA_9lhe3AcMowq35OPRZKXgKJIWgw",
+    videoURL: "https://youtu.be/zeW3wf4ByEA",
   },
   {
-    title: "make yourself comfortable",
+    title: "Adobe Photoshop",
     description:
-      "Indulge in Tranquility: Mastering the Art of Making Yourself Comfortable. Create a sanctuary of relaxation and ease as you learn the secrets to crafting a cozy haven that embraces your senses, soothes your soul, and invites you to unwind in pure comfort.",
+      "Adobe Photoshop is a powerful and widely used graphics editing software that allows users to manipulate, enhance, and create digital images and artwork. It offers a variety of tools for tasks like photo retouching, image composition, and graphic design, making it a go-to application for professionals and enthusiasts in the creative industry.",
     imageURL:
-      "https://plus.unsplash.com/premium_photo-1669374537810-f88d8ad82818?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+      "https://i.ytimg.com/vi/VseIS2-YAi0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB5XJ-gZry2_Uutg4kTgICSim7ePw",
+    videoURL: "https://www.youtube.com/watch?v=VseIS2-YAi0",
   },
   {
-    title: "enjoy yourself",
+    title: "Vercel",
     description:
-      "Embrace Joyful Moments: A Guide to Wholeheartedly Enjoying Yourself. Delve into a world of laughter, leisure, and self-discovery, as you uncover the keys to cherishing life's simple pleasures and cultivating a genuine sense of happiness in every experience.",
+      "Vercel is a cloud platform that specializes in enabling developers to build, deploy, and host websites and web applications with high performance and ease. It provides tools for seamless collaboration, automatic scaling, and continuous deployment, allowing developers to focus on creating exceptional user experiences without the complexities of managing infrastructure.",
     imageURL:
-      "https://images.unsplash.com/photo-1506157786151-b8491531f063?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+      "https://i.ytimg.com/vi/3m1FcGW6V4g/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDt--27CS6DaZCizvQfUBg1HhCmJw",
+    videoURL: "https://www.youtube.com/watch?v=3m1FcGW6V4g",
   },
   {
-    title: "explorer more",
+    title: "Visual Studio Code",
     description:
-      "Unveiling Boundless Horizons: Embrace the Call to Explore More. Embark on a thrilling odyssey of discovery and curiosity, as you venture beyond your comfort zone, unravel hidden treasures, and open the door to endless possibilities that await the intrepid explorer in you.",
+      "Visual Studio Code (VS Code) is a lightweight and versatile code editor developed by Microsoft. It's widely used by developers for writing, editing, and debugging code across various programming languages. With its extensive extensions ecosystem, integrated version control, and powerful features, VS Code enhances productivity and facilitates efficient software development workflows.",
     imageURL:
-      "https://images.unsplash.com/photo-1559481581-d800dfdb9316?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1018&q=80",
+      "https://i.ytimg.com/vi/KMxo3T_MTvY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCDcd06tMjboZz_9K_UPWAXrNpHsg",
+    videoURL: "https://youtu.be/KMxo3T_MTvY",
   },
 ]);

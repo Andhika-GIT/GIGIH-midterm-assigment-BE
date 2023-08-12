@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const productSchema = new mongoose.Schema({
   videoId: {
@@ -13,12 +13,16 @@ const productSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  imageURL: {
+    type: String,
+    required: true,
+  },
   link: {
     type: String,
     required: true,
   },
 });
 
-const Product = mongoose.model('Product', productSchema, 'product');
+const Product = mongoose.model("Product", productSchema, "product");
 
 export default Product;
