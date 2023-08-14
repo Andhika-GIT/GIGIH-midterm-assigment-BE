@@ -155,16 +155,16 @@ Returns all product list based on spesific video.
 ```
   {
     product: [
-              {
-                  id: asdf08108312
-                  videoId: 123kj0ausd0f
-                  imageURL: www.image-product.com
-                  link: "www.product-link.com"
-                  title: "product-title"
-                  price: 125.200
-              },
-              ...
-              ]
+                {
+                    id: asdf08108312
+                    videoId: 123kj0ausd0f
+                    imageURL: www.image-product.com
+                    link: "www.product-link.com"
+                    title: "product-title"
+                    price: 125.200
+                },
+                ...
+             ]
   }
 ```
 
@@ -230,7 +230,7 @@ Returns all comments based on spesific video.
                     createdAt: 1529644667834
                 },
                 ...
-              ]
+             ]
   }
 ```
 
