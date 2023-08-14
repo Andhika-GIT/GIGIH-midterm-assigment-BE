@@ -114,7 +114,7 @@ Create new video.
 Returns single video.
 
 - **URL Params**  
-   _Required:_ `videoId=[integer]`
+   _Required:_ `videoId=[string]`
 - **Data Params**  
   None
 - **Headers**  
@@ -142,7 +142,7 @@ Returns single video.
 Returns all product list based on spesific video.
 
 - **URL Params**  
-   _Required:_ `videoId=[integer]`
+   _Required:_ `videoId=[string]`
 - **Data Params**  
   None
 - **Headers**  
@@ -172,7 +172,7 @@ Returns all product list based on spesific video.
 Create new product on spesific video.
 
 - **URL Params**  
-   _Required:_ `videoId=[integer]`
+   _Required:_ `videoId=[string]`
 
 * **Data Params**
 
@@ -211,7 +211,7 @@ Create new product on spesific video.
 Returns all comments based on spesific video.
 
 - **URL Params**  
-   _Required:_ `videoId=[integer]`
+   _Required:_ `videoId=[string]`
 - **Data Params**  
   None
 - **Headers**  
@@ -238,7 +238,7 @@ Returns all comments based on spesific video.
 Create new comment on spesific video and return the new object.
 
 - **URL Params**  
-   _Required:_ `videoId=[integer]`
+   _Required:_ `videoId=[string]`
 
 * **Data Params**
 
