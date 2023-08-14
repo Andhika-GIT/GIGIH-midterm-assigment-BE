@@ -26,7 +26,7 @@ create `.env` file and add these variabel
 
 ```
 
-the database name is tokopedia play
+The database name is `tokopedia_play`
 
 ## **DATABASE STRUCTURE**
 
@@ -97,16 +97,15 @@ Create new video.
 
 ```
 {
-  video: [
-           {
+  video:
+          {
             id: asdf08108312
             title: "video-1"
             description: "video-1 desc"
             imageUrl: "http.imageurl.com"
             videoURL: "http.videourl.com"
-           },
-           ...
-         ]
+          },
+
 }
 ```
 
