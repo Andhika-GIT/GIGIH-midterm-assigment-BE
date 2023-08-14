@@ -1,3 +1,5 @@
+Link to the [app](https://tokopedia-play-hub.vercel.app/)
+
 ## **SETUP ( PLEASE READ )**
 
 In order to write mongoDB command in your terminal, you need to install and configure mongoDB first in your operating system. If you have not installed mongoDB yet, please watch this video first : https://youtu.be/oC6sKlhz0OE
@@ -10,8 +12,9 @@ After setting up mongoDB, follow the instructions below
 - run `mongosh`, it should run the local server for mongoDB
 - run `use youtube` to create new database called "youtube"
 - run `load( "query/createCollections.js" )` to create 4 collections (video, product, user, comment)
-- run `load( "query/insertVideo.js" )` to insert data into video collection
-- open new terminal and run `npm run start` to start local server
+- run `load( "query/insertVideo.js" )` to insert document into video collection
+- you could also insert document into comment or product collection by using endpoint listed down below
+- open new terminal and run `npm run dev` to start development local server
 
 create `.env` file and add these variabel
 
@@ -22,6 +25,8 @@ create `.env` file and add these variabel
 
 
 ```
+
+the database name is tokopedia play
 
 ## **DATABASE STRUCTURE**
 
@@ -66,14 +71,24 @@ Returns all videos thumbnail data.
 }
 ```
 
-### **GET `/api/v1/video/:videoId`**
+### **POST `/api/v1/video/`**
 
-Returns single video.
+Create new video.
 
 - **URL Params**  
   None
-- **Data Params**  
-  None
+
+* **Data Params**
+
+```
+  {
+    title: string,
+    description: string,
+    imageURL: string,
+    videoURL: string,
+  }
+```
+
 - **Headers**  
   Content-Type: application/json
 - **Success Response:**
@@ -86,10 +101,40 @@ Returns single video.
            {
             id: asdf08108312
             title: "video-1"
+            description: "video-1 desc"
             imageUrl: "http.imageurl.com"
+            videoURL: "http.videourl.com"
            },
            ...
          ]
+}
+```
+
+### **GET `/api/v1/video/:videoId`**
+
+Returns single video.
+
+- **URL Params**  
+   _Required:_ `videoId=[integer]`
+- **Data Params**  
+  None
+- **Headers**  
+  Content-Type: application/json
+- **Success Response:**
+- **Code:** 200  
+  **Content (Example):**
+
+```
+{
+  video:
+        {
+          id: asdf08108312
+          title: "video-1"
+          description: "video-1 desc"
+          imageUrl: "http.imageurl.com"
+          videoURL: "http.videourl.com"
+        },
+
 }
 ```
 
@@ -112,6 +157,8 @@ Returns all product list based on spesific video.
     product: [
               {
                   id: asdf08108312
+                  videoId: 123kj0ausd0f
+                  imageURL: www.image-product.com
                   link: "www.product-link.com"
                   title: "product-title"
                   price: 125.200
@@ -119,6 +166,45 @@ Returns all product list based on spesific video.
               ...
               ]
   }
+```
+
+### **POST `/api/v1/product/:videoId`**
+
+Create new product on spesific video.
+
+- **URL Params**  
+   _Required:_ `videoId=[integer]`
+
+* **Data Params**
+
+```
+  {
+    videoId: string
+    title: string,
+    price: number,
+    imageURL: string,
+    link: string,
+  }
+```
+
+- **Headers**  
+  Content-Type: application/json
+- **Success Response:**
+- **Code:** 200  
+  **Content (Example):**
+
+```
+{
+  product:
+              {
+                  id: asdf08108312
+                  videoId: 123kj0ausd0f
+                  imageURL: www.image-product.com
+                  link: "www.product-link.com"
+                  title: "product-title"
+                  price: 125.200
+              },
+}
 ```
 
 ### **GET `/api/v1/comment/:videoId`**
@@ -141,7 +227,7 @@ Returns all comments based on spesific video.
                 {
                     username: "vinsen"
                     comment: "great video"
-                    timestamp: 1529644667834
+                    createdAt: 1529644667834
                 },
                 ...
               ]
@@ -176,7 +262,7 @@ Create new comment on spesific video and return the new object.
     comment: {
                 username: "vinsen"
                 comment: "great video"
-                timestamp: 1529644667834
+                createdAt: 1529644667834
              },
   }
 ```
