@@ -11,7 +11,7 @@ After setting up mongoDB, follow the instructions below
 - run `npm install` ( make sure you have installed node as well )
 - run `mongosh`, it should run the local server for mongoDB
 - run `use tokopedia_play` to create new database called "tokopedia_play"
-- run `load( "query/createCollections.js" )` to create 4 collections (video, product, user, comment)
+- run `load( "query/createCollections.js" )` to create 3 collections (video, product, comment)
 - run `load( "query/insertVideo.js" )` to insert document into video collection
 - you could also insert document into comment or product collection by using endpoint listed down below
 - open new terminal and run `npm run dev` to start development local server
